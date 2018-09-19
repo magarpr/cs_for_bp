@@ -10,4 +10,15 @@ String new_value = "Site # as it appears in the EDC System (please separate each
 
 DataTable new_collection = old_collection;
 
-// 
+// Blue Prism Code
+for (int i = 0; i < old_collection.Rows.Count; i++)
+{
+    for (int j = 0; j < old_collection.Columns.Count; j++)
+    {
+        if (old_collection.Rows[i][j] == old_value)
+        {
+            old_collection.Rows[i][j] = new_value;
+        }
+    }
+}
+new_collection = old_collection;
